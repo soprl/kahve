@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200">
+  <defs>
+    <linearGradient id="drink-bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#4cadeb"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#drink-bg)"/>
+  <g fill="#fff" opacity="0.95">
+    <path d="M134 40h52l-8 110a18 18 0 0 1-18 16h0a18 18 0 0 1-18-16l-8-110z"/>
+    <path d="M118 40h84l-4 18h-76l-4-18z"/>
+    <path d="M160 40V24" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <path d="M144 94h32" stroke="#2563eb" stroke-width="10" stroke-linecap="round" opacity="0.5"/>
+  <path d="M142 118h36" stroke="#2563eb" stroke-width="10" stroke-linecap="round" opacity="0.4"/>
+</svg>

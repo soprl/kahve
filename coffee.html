@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kahve Kiosk Sipariş Sistemi</title>
+    <link rel="stylesheet" href="styles-coffee.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Kahve Köşesi</h1>
+      <p>Özel harmanlarımızı keşfet, yanında tatlı seç ve hızlıca sipariş ver.</p>
+    </header>
+
+    <main class="layout">
+      <section class="menu" aria-labelledby="menu-title">
+        <h2 id="menu-title">Kahve Menüsü</h2>
+        <div class="menu-filters">
+          <button class="filter-button is-active" data-filter="all">Tümü</button>
+          <button class="filter-button" data-filter="espresso">Espresso Bazlı</button>
+          <button class="filter-button" data-filter="brew">Demleme</button>
+          <button class="filter-button" data-filter="cold">Soğuk Kahveler</button>
+          <button class="filter-button" data-filter="dessert">Tatlı & Atıştırmalık</button>
+        </div>
+        <div class="menu-grid" id="menu-grid">
+          <!-- Kartlar JS ile doldurulacak -->
+        </div>
+      </section>
+
+      <aside class="cart" aria-labelledby="cart-title">
+        <h2 id="cart-title">Sipariş Özeti</h2>
+        <div id="cart-items">
+          <p class="cart-empty">Sepetin boş. Kahve seçerek başla.</p>
+        </div>
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Ara Toplam</span>
+            <span id="subtotal">0,00 ₺</span>
+          </div>
+          <div class="summary-row">
+            <span>KDV (10%)</span>
+            <span id="tax">0,00 ₺</span>
+          </div>
+          <div class="summary-row total">
+            <span>Genel Toplam</span>
+            <span id="total">0,00 ₺</span>
+          </div>
+        </div>
+        <section class="checkout" aria-labelledby="payment-title">
+          <h3 id="payment-title">Ödeme Yöntemi</h3>
+          <form id="payment-form">
+            <label>
+              <input type="radio" name="payment" value="pos" checked>
+              Temassız POS
+            </label>
+            <label>
+              <input type="radio" name="payment" value="cash">
+              Nakit
+            </label>
+            <label>
+              <input type="radio" name="payment" value="qr">
+              QR Kod ile Öde
+            </label>
+            <button type="submit" class="checkout-button">Siparişi Tamamla</button>
+          </form>
+          <p class="checkout-note" id="checkout-note"></p>
+        </section>
+      </aside>
+    </main>
+
+    <template id="cart-item-template">
+      <div class="cart-item">
+        <div class="item-info">
+          <p class="item-name"></p>
+          <p class="item-options"></p>
+        </div>
+        <div class="item-controls">
+          <span class="item-price"></span>
+          <div class="quantity-controls">
+            <button class="quantity-button decrease" type="button" aria-label="Adet azalt">−</button>
+            <span class="item-quantity" aria-live="polite">1</span>
+            <button class="quantity-button increase" type="button" aria-label="Adet arttır">+</button>
+          </div>
+          <button class="remove-button" type="button">Kaldır</button>
+        </div>
+      </div>
+    </template>
+
+    <script src="coffee.js"></script>
+  </body>
+</html>
